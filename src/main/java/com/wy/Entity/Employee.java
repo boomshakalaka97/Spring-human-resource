@@ -15,7 +15,7 @@ public class Employee {
     private String nation;
     private String marriage;
     private String levelId;
-    private String health;
+
     private String birthplace;
     private String IDnum;
     private String school;
@@ -26,6 +26,141 @@ public class Employee {
     private String rankId;
     private Date birth;
     private Date datecome ;
+    private String natureWork;
 
+    public String getEmid() {
+        return emid;
+    }
 
+    public void setEmid(String emid) {
+        this.emid = emid;
+    }
+
+    public String getEmname() {
+        return emname;
+    }
+
+    public void setEmname(String emname) {
+        this.emname = emname;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getNation() {
+        return nation;
+    }
+
+    public void setNation(String nation) {
+        this.nation = nation;
+    }
+
+    public String getMarriage() {
+        return marriage;
+    }
+
+    public void setMarriage(String marriage) {
+        this.marriage = marriage;
+    }
+
+    public String getLevelId() {
+        return levelId;
+    }
+
+    public void setLevelId(String levelId) {
+        this.levelId = levelId;
+    }
+
+    public String getBirthplace() {
+        return birthplace;
+    }
+
+    public void setBirthplace(String birthplace) {
+        this.birthplace = birthplace;
+    }
+
+    public String getIDnum() {
+        return IDnum;
+    }
+
+    public void setIDnum(String IDnum) {
+        this.IDnum = IDnum;
+    }
+
+    public String getSchool() {
+        return school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPostId() {
+        return postId;
+    }
+
+    public void setPostId(String postId) {
+        this.postId = postId;
+    }
+
+    public String getSituation() {
+        return situation;
+    }
+
+    public void setSituation(String situation) {
+        this.situation = situation;
+    }
+
+    public String getDepartId() {
+        return departId;
+    }
+
+    public void setDepartId(String departId) {
+        this.departId = departId;
+    }
+
+    public String getRankId() {
+        return rankId;
+    }
+
+    public void setRankId(String rankId) {
+        this.rankId = rankId;
+    }
+
+    public Date getBirth() {
+        return birth;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
+
+    public Date getDatecome() {
+        return datecome;
+    }
+
+    public void setDatecome(Date datecome) {
+        this.datecome = datecome;
+    }
+
+    public String getNatureWork() {
+        return natureWork;
+    }
+
+    public void setNatureWork(String natureWork) {
+        this.natureWork = natureWork;
+    }
 }
