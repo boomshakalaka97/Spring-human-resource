@@ -2,6 +2,7 @@ package com.wy.Controller;
 
 import com.wy.Entity.Rank;
 import com.wy.Service.RankService;
+import com.wy.Util.ReturnUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -35,5 +36,11 @@ public class RankController {
     @ResponseBody
     public Rank findRank(@RequestBody Rank rank){
         return rankService.findRank(rank);
+    }
+
+    @PostMapping(value="/findAllRank")
+    @ResponseBody
+    public ReturnUtil getAllRank(){
+        return ReturnUtil.ok(rankService.getAllRank());
     }
 }

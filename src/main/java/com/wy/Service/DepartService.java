@@ -5,6 +5,8 @@ import com.wy.Entity.Depart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DepartService {
     @Autowired
@@ -40,5 +42,8 @@ public class DepartService {
         }catch(Exception e){
             return null;
         }
+    }
+    public List<Depart> findAllDepart(){
+        return departDao.findAll();
     }
 }

@@ -5,6 +5,8 @@ import com.wy.Entity.Rank;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RankService {
     @Autowired
@@ -40,5 +42,8 @@ public class RankService {
         }catch(Exception e){
             return null;
         }
+    }
+    public List<Rank> getAllRank(){
+        return  rankDao.findAll();
     }
 }

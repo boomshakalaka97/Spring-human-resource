@@ -2,6 +2,8 @@ package com.wy.Controller;
 
 import com.wy.Entity.Post;
 import com.wy.Service.PostService;
+import com.wy.Util.ReturnUtil;
+import org.hibernate.loader.custom.Return;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -35,5 +37,11 @@ public class PostController {
     @ResponseBody
     public Post findPost(@RequestBody Post post){
         return postService.findPost(post);
+    }
+
+    @PostMapping(value="/findAllPost")
+    @ResponseBody
+    public ReturnUtil findAllPost(){
+        return ReturnUtil.ok(postService.findAllPost());
     }
 }

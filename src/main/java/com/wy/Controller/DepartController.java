@@ -2,6 +2,7 @@ package com.wy.Controller;
 
 import com.wy.Entity.Depart;
 import com.wy.Service.DepartService;
+import com.wy.Util.ReturnUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -35,5 +36,11 @@ public class DepartController {
     @ResponseBody
     public Depart findDepart(@RequestBody Depart depart){
         return departService.findDepart(depart);
+    }
+
+    @PostMapping(value="/findAllDepart")
+    @ResponseBody
+    public ReturnUtil findAllDepart(){
+        return ReturnUtil.ok(departService.findAllDepart());
     }
 }

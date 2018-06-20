@@ -33,4 +33,22 @@ public class EmployeeController {
     public ReturnUtil findBySituation(@RequestBody Employee employee){
         return employeeService.findBySituation(employee.getSituation());
     }
+
+    /*@PostMapping(value="/findBySituationConnect")
+    @ResponseBody
+    public ReturnUtil findBySituationConnect(@RequestBody Employee employee){
+
+    }
+
+    @PostMapping(value="/findByNature_workConnect")
+    @ResponseBody
+    public ReturnUtil findByNature_workConnect(@RequestBody Employee employee){
+
+    }
+
+    @PostMapping(value="/findAllEmployeeConnect")
+    @ResponseBody
+    public ReturnUtil findAllEmployeeConnect(@RequestBody Employee employee){
+
+    }*/
 }

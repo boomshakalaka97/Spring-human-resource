@@ -5,11 +5,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "rank")
+@Table(name = "ranklist")
 public class Rank {
      @Id
      private String rankId;
-     private int basesalary;
+     private String basesalary;//?不能使用int
 
     public String getRankId() {
         return rankId;
@@ -19,11 +19,5 @@ public class Rank {
         this.rankId = rankId;
     }
 
-    public int getBasesalary() {
-        return basesalary;
-    }
 
-    public void setBasesalary(int basesalary) {
-        this.basesalary = basesalary;
-    }
 }

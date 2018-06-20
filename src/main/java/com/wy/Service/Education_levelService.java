@@ -5,6 +5,8 @@ import com.wy.Entity.Education_level;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class Education_levelService {
     @Autowired
@@ -41,4 +43,9 @@ public class Education_levelService {
             return null;
         }
     }
+
+    public List<Education_level> findAllLevel(){
+        return education_levelDao.findAll();
+    }
+
 }

@@ -5,6 +5,8 @@ import com.wy.Entity.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PostService {
     @Autowired
@@ -40,5 +42,9 @@ public class PostService {
         }catch(Exception e){
             return null;
         }
+    }
+
+    public List<Post> findAllPost(){
+       return postDao.findAll();
     }
 }
