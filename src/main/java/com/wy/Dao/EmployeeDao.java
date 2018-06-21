@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public interface EmployeeDao extends JpaRepository<Employee,String> {
+    Employee save(Employee employee);
     List<Employee> findByNatureWork(String Nature_work);
     List<Employee> findAll();
     List<Employee> findBySituation(String Situation);

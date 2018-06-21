@@ -17,7 +17,7 @@ public class Employee {
     private String levelId;
 
     private String birthplace;
-    private String IDnum;
+    private String idnum;
     private String school;
     private String address;
     private String postId;
@@ -27,6 +27,17 @@ public class Employee {
     private Date birth;
     private Date datecome ;
     private String natureWork;
+
+
+    public String getIdnum() {
+        return idnum;
+    }
+
+    public void setIdnum(String idnum) {
+        this.idnum = idnum;
+    }
+
+
 
     public String getEmid() {
         return emid;
@@ -84,13 +95,7 @@ public class Employee {
         this.birthplace = birthplace;
     }
 
-    public String getIDnum() {
-        return IDnum;
-    }
 
-    public void setIDnum(String IDnum) {
-        this.IDnum = IDnum;
-    }
 
     public String getSchool() {
         return school;

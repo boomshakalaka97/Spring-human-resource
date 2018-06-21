@@ -16,6 +16,11 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
 
+    @PostMapping(value="/add")
+    @ResponseBody//录入
+    public ReturnUtil checkIn(@RequestBody Employee employee) {
+        return employeeService.addEmployee(employee);
+    }
     @PostMapping(value="/findByNature_work")
     @ResponseBody
     public ReturnUtil findEmployeeByNature_work(@RequestBody Employee employee){
