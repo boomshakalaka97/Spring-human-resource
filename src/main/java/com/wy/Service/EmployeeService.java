@@ -15,7 +15,7 @@ public class EmployeeService {
     EmployeeDao employeeDao;
 
     public ReturnUtil addEmployee(Employee employee) {
-        try {
+
             Employee new_employee = new Employee();
             new_employee.setEmid(IdUtil.generateId());
             new_employee.setEmname(employee.getEmname());
@@ -36,9 +36,8 @@ public class EmployeeService {
             new_employee.setIdnum(employee.getIdnum());
             employeeDao.save(new_employee);
 
-        } catch (Exception e) {
-        }
-        return ReturnUtil.ok();
+
+        return ReturnUtil.ok(new_employee);
     }
     public ReturnUtil findEmployeeByNature_work(String Nature_work){
         List<Employee> employeeList=employeeDao.findByNatureWork(Nature_work);

@@ -37,7 +37,7 @@ public class Wage_rulesService {
 
     public Wage_rules findRules(Wage_rules rules){
         try{
-            return wage_rulesDao.findByAttendance(rules.getAttendance());
+            return wage_rulesDao.findByRulesid(rules.getRulesid());
         }catch(Exception e){
             return null;
         }

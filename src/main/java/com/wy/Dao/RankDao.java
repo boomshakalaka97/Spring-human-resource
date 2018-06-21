@@ -12,4 +12,5 @@ public interface RankDao extends JpaRepository<Rank,String> {
     void delete(Rank rank);
     Rank findByRankId(String rankId);
     List<Rank> findAll();
+
 }

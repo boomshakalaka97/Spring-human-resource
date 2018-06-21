@@ -12,4 +12,7 @@ public interface EmployeeDao extends JpaRepository<Employee,String> {
     List<Employee> findByNatureWork(String Nature_work);
     List<Employee> findAll();
     List<Employee> findBySituation(String Situation);
+
+    Employee findByEmid(String emId);
+
 }

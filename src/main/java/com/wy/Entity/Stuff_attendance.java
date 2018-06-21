@@ -9,8 +9,6 @@ import javax.persistence.Table;
 public class Stuff_attendance {
     @Id
     private String emid;
-    private String departName;
-    private String emname;
     private int late;
     private int earlyleave;
     private int extrawork;
@@ -25,21 +23,7 @@ public class Stuff_attendance {
         this.emid = emid;
     }
 
-    public String getDepartName() {
-        return departName;
-    }
 
-    public void setDepartName(String departName) {
-        this.departName = departName;
-    }
-
-    public String getEmname() {
-        return emname;
-    }
-
-    public void setEmname(String emname) {
-        this.emname = emname;
-    }
 
     public int getLate() {
         return late;
