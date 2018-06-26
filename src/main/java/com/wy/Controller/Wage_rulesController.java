@@ -2,13 +2,14 @@ package com.wy.Controller;
 
 import com.wy.Entity.Wage_rules;
 import com.wy.Service.Wage_rulesService;
+import com.wy.Util.ReturnUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 @CrossOrigin
-@RequestMapping(value="/Wage_rules")
+@RequestMapping(value="/wage_rules")
 public class Wage_rulesController {
     @Autowired
     private Wage_rulesService wage_rulesService;
@@ -27,8 +28,10 @@ public class Wage_rulesController {
 
     @PostMapping(value="/update")
     @ResponseBody
-    public void updateRules(@RequestBody Wage_rules rules){
+    public ReturnUtil updateRules(@RequestBody Wage_rules rules){
+
         wage_rulesService.updateRules(rules);
+        return ReturnUtil.ok();
     }
 
     @PostMapping(value="/find")

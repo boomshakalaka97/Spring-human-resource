@@ -44,7 +44,9 @@ public class Stuff_salaryService {
             stuff_salaries.add(stuff_salary);
         }
         for (Stuff_salary stuff_salary : stuff_salaries) {
+            System.out.println("1"+stuff_salary.getEmid());
             Employee employee = employeeDao.findByEmid(stuff_salary.getEmid());
+            System.out.println("2"+employee.getEmid()+" "+employee.getRankId()+employee.getEmname());
             Rank rank = rankDao.findByRankId(employee.getRankId());
             stuff_salary.setBasesalary(rank.getBasesalary());
             stuff_salary.setEmname(employee.getEmname());
@@ -69,5 +71,7 @@ public class Stuff_salaryService {
         }
     }
 
-
+    public List<Stuff_salary> findAllSalary(){
+        return stuff_salaryDao.findAll();
+    }
 }

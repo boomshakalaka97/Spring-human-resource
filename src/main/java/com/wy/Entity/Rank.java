@@ -9,7 +9,7 @@ import javax.persistence.Table;
 public class Rank {
      @Id
      private String rankId;
-     private int basesalary;//?不能使用int
+     private int basesalary;
 
     public String getRankId() {
         return rankId;

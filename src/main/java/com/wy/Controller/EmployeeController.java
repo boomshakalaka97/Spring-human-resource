@@ -18,7 +18,7 @@ public class EmployeeController {
 
     @PostMapping(value="/add")
     @ResponseBody//录入
-    public ReturnUtil checkIn(@RequestBody Employee employee) {
+    public ReturnUtil addEmployee(@RequestBody Employee employee) {
         return employeeService.addEmployee(employee);
     }
     @PostMapping(value="/findByNature_work")
@@ -39,21 +39,28 @@ public class EmployeeController {
         return employeeService.findBySituation(employee.getSituation());
     }
 
-    /*@PostMapping(value="/findBySituationConnect")
+    @PostMapping(value="/findByEmid")
     @ResponseBody
-    public ReturnUtil findBySituationConnect(@RequestBody Employee employee){
-
+    public ReturnUtil findByEmid(@RequestBody Employee employee){
+        return employeeService.findByEmid(employee.getEmid());
     }
 
-    @PostMapping(value="/findByNature_workConnect")
+    @PostMapping(value="/findEmployeeVague")
     @ResponseBody
-    public ReturnUtil findByNature_workConnect(@RequestBody Employee employee){
-
+    public ReturnUtil findEmployeeVague(@RequestBody Employee employee){
+        return employeeService.findByEmnameVague(employee.getEmname());
     }
 
-    @PostMapping(value="/findAllEmployeeConnect")
-    @ResponseBody
-    public ReturnUtil findAllEmployeeConnect(@RequestBody Employee employee){
+    @PostMapping(value="/update")
+    @ResponseBody//录入
+    public ReturnUtil updateEmployee(@RequestBody Employee employee) {
+        return employeeService.addEmployee(employee);
+    }
 
-    }*/
+    @PostMapping(value="/delete")
+    @ResponseBody//录入
+    public ReturnUtil deleteEmployee(@RequestBody Employee employee) {
+        return employeeService.deleteEmployee(employee);
+    }
+
 }

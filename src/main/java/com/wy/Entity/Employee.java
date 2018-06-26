@@ -1,15 +1,14 @@
 package com.wy.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
 @Table(name="employee")
 public class Employee {
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Id
-    private String emid;
+    private int emid;
     private String emname;
     private String sex;
     private String nation;
@@ -38,12 +37,11 @@ public class Employee {
     }
 
 
-
-    public String getEmid() {
+    public int getEmid() {
         return emid;
     }
 
-    public void setEmid(String emid) {
+    public void setEmid(int emid) {
         this.emid = emid;
     }
 

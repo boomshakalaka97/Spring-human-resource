@@ -12,4 +12,5 @@ public interface DepartDao extends JpaRepository<Depart,String> {
     void delete(Depart depart);
     Depart findByDepartId(String departId);
     List<Depart> findAll();
+    List<Depart>findAllByDepartNameContaining(String departName);
 }

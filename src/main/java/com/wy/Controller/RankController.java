@@ -28,8 +28,9 @@ public class RankController {
 
     @PostMapping(value="/update")
     @ResponseBody
-    public void updateRank(@RequestBody Rank rank){
+    public ReturnUtil updateRank(@RequestBody Rank rank){
         rankService.updateRank(rank);
+        return  ReturnUtil.ok();
     }
 
     @PostMapping(value="/find")

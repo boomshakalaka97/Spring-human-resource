@@ -2,6 +2,7 @@ package com.wy.Service;
 
 import com.wy.Dao.DepartDao;
 import com.wy.Entity.Depart;
+import com.wy.Util.IdUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +15,15 @@ public class DepartService {
 
     public void addDepart(Depart depart){
         try{
-            departDao.save(depart);
+            Depart depart1=new Depart();
+            depart1.setDepartId(IdUtil.generateId());
+            depart1.setDepartName(depart.getDepartName());
+            departDao.save(depart1);
         }catch (Exception e){
+        }
 
         }
-    }
+
 
     public void deleteDepart(Depart depart){
         try{
@@ -45,5 +50,9 @@ public class DepartService {
     }
     public List<Depart> findAllDepart(){
         return departDao.findAll();
+    }
+
+    public List<Depart> findDepartVague(String departName){
+        return departDao.findAllByDepartNameContaining(departName);
     }
 }

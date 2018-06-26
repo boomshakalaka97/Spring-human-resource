@@ -8,22 +8,20 @@ import javax.persistence.Table;
 @Table(name="stuff_attendance")
 public class Stuff_attendance {
     @Id
-    private String emid;
+    private int emid;
     private int late;
     private int earlyleave;
     private int extrawork;
     private int holiday;
     private int absent;
 
-    public String getEmid() {
+    public int getEmid() {
         return emid;
     }
 
-    public void setEmid(String emid) {
+    public void setEmid(int emid) {
         this.emid = emid;
     }
-
-
 
     public int getLate() {
         return late;

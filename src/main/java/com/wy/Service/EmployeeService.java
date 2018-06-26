@@ -17,7 +17,7 @@ public class EmployeeService {
     public ReturnUtil addEmployee(Employee employee) {
 
             Employee new_employee = new Employee();
-            new_employee.setEmid(IdUtil.generateId());
+            new_employee.setEmid(employee.getEmid());
             new_employee.setEmname(employee.getEmname());
             new_employee.setSex(employee.getSex());
             new_employee.setDepartId(employee.getDepartId());
@@ -34,6 +34,7 @@ public class EmployeeService {
             new_employee.setSchool(employee.getSchool());
             new_employee.setSituation(employee.getSituation());
             new_employee.setIdnum(employee.getIdnum());
+            System.out.println(new_employee.getEmid()+"  "+new_employee.getEmname());
             employeeDao.save(new_employee);
 
 
@@ -50,5 +51,17 @@ public class EmployeeService {
     public ReturnUtil findBySituation(String Nature_work){
         List<Employee> employeeList=employeeDao.findBySituation(Nature_work);
         return ReturnUtil.ok(employeeList);
+    }
+    public ReturnUtil findByEmid(int emid){
+        Employee employee=employeeDao.findByEmid(emid);
+        return ReturnUtil.ok(employee);
+    }
+    public ReturnUtil findByEmnameVague(String emname){
+        List<Employee> employee=employeeDao.findAllByEmnameContaining(emname);
+        return ReturnUtil.ok(employee);
+    }
+    public ReturnUtil deleteEmployee(Employee employee){
+        employeeDao.delete(employee);
+        return ReturnUtil.ok(employee);
     }
 }

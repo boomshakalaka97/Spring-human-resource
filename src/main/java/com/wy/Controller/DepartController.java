@@ -16,8 +16,9 @@ public class DepartController {
 
     @PostMapping(value="/add")
     @ResponseBody
-    public void addDepart(@RequestBody Depart depart){
+    public ReturnUtil addDepart(@RequestBody Depart depart){
         departService.addDepart(depart);
+        return ReturnUtil.ok();
     }
 
     @PostMapping(value="/delete")
@@ -42,5 +43,11 @@ public class DepartController {
     @ResponseBody
     public ReturnUtil findAllDepart(){
         return ReturnUtil.ok(departService.findAllDepart());
+    }
+
+    @PostMapping(value="/findDepartVague")
+    @ResponseBody
+    public ReturnUtil findDepartVague(@RequestBody Depart depart){
+        return ReturnUtil.ok(departService.findDepartVague(depart.getDepartName()));
     }
 }

@@ -22,4 +22,10 @@ public class Stuff_salaryController {
         stuff_salaryService.filltable(stuff_salaryService.salarycalculate());
         return ReturnUtil.ok(stuff_salaryService.salarycalculate());
     }
+
+    @PostMapping(value="/findAllSalary")
+    @ResponseBody
+    public ReturnUtil findAllSalary(){
+        return ReturnUtil.ok(stuff_salaryService.findAllSalary());
+    }
 }

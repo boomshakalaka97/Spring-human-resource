@@ -50,7 +50,7 @@ public class UserService {
         User new_user=userDao.findByUserName(user.getUserName());
         if(new_user==null) return ReturnUtil.err("用户名不存在");
         if(new_user.getPassword().equals(user.getPassword())==false)return ReturnUtil.err("密码错误");
-        else return ReturnUtil.ok();
+        else return ReturnUtil.ok(new_user);
     }
 
     public String deleteUser(User user){

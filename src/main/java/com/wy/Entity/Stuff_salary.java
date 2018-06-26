@@ -8,7 +8,7 @@ import javax.persistence.Table;
 @Table(name="stuff_salary")
 public class Stuff_salary {
     @Id
-    private String emid;
+    private int emid;
     private String departName;
     private String emname;
     private int late;
@@ -32,11 +32,11 @@ public class Stuff_salary {
         this.totalsalary = totalsalary;
     }
 
-    public String getEmid() {
+    public int getEmid() {
         return emid;
     }
 
-    public void setEmid(String emid) {
+    public void setEmid(int emid) {
         this.emid = emid;
     }
 
